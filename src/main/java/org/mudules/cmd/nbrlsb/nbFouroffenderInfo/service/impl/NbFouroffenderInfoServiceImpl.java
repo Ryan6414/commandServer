@@ -1,12 +1,12 @@
-package org.jeecg.modules.netboat.nbFouroffenderInfo.service.impl;
+package org.mudules.cmd.nbrlsb.nbFouroffenderInfo.service.impl;
 
-import org.jeecg.modules.netboat.nbFouroffenderInfo.entity.NbFouroffenderInfo;
-import org.jeecg.modules.netboat.nbFouroffenderInfo.mapper.NbFouroffenderInfoMapper;
-import org.jeecg.modules.netboat.nbFouroffenderInfo.service.INbFouroffenderInfoService;
-import org.jeecg.modules.netboat.nbOffenderInfo.entity.NbOffenderInfo;
-import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.mudules.cmd.nbrlsb.nbFouroffenderInfo.entity.NbFouroffenderInfo;
+import org.mudules.cmd.nbrlsb.nbFouroffenderInfo.mapper.NbFouroffenderInfoMapper;
+import org.mudules.cmd.nbrlsb.nbFouroffenderInfo.service.INbFouroffenderInfoService;
+import org.springframework.stereotype.Service;
+
 
 /**
  * @Description: nb_fouroffender_info
@@ -16,12 +16,19 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
  */
 @Service
 public class NbFouroffenderInfoServiceImpl extends ServiceImpl<NbFouroffenderInfoMapper, NbFouroffenderInfo> implements INbFouroffenderInfoService {
+
     @Override
-    public NbFouroffenderInfo getByIdCardNo(String  idCardNumber) {
-        return this.baseMapper.getByIdCardNo(idCardNumber);
+    public NbFouroffenderInfo getOneNbFouroffenderInfo() {
+        return super.baseMapper.getOneNbFouroffenderInfo();
     }
+
     @Override
-    public String getName(String  number) {
-        return this.baseMapper.getName(number);
+    public int updateUploadFlagById(String upFlag, String id) {
+        return super.baseMapper.updateUploadFlagById(upFlag,id);
+    }
+
+    @Override
+    public int updateUploadFlagByFalg(String upFlag, String id) {
+        return super.baseMapper.updateUploadFlagByFalg(upFlag,id);
     }
 }

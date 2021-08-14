@@ -19,6 +19,7 @@ public class Base64Jx {
             in.close();
         } catch (IOException e) {
             e.printStackTrace();
+            return ""; //如果数据库照片路径有问题直接返回空.
         }
         // 对字节数组Base64编码
         BASE64Encoder encoder = new BASE64Encoder();

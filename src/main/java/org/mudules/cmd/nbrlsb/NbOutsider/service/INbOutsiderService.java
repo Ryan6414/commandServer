@@ -1,6 +1,7 @@
 package org.mudules.cmd.nbrlsb.NbOutsider.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.apache.ibatis.annotations.Update;
 import org.mudules.cmd.nbrlsb.NbOutsider.entity.NbOutsider;
 
 import java.util.List;
@@ -13,11 +14,19 @@ import java.util.List;
  */
 public interface INbOutsiderService extends IService<NbOutsider> {
 
-   List<NbOutsider> getAll();
-
+//   List<NbOutsider> getAll();
 
    // 获取一个人员信息
-   NbOutsider getOneInfo();
+   NbOutsider getOneNboutsider();
 
-   Boolean updateByUpLoad(Integer upid, String id);
+
+
+   int updateUploadFlagById(String upFlag, String id);
+
+
+   int updateUploadFlagByFalg(String upFlag, String id);
+
+//   NbOutsider getOneInfo(Integer up , Integer del);
+//
+//   Boolean updateByUpLoad(Integer upload, String id);
 }

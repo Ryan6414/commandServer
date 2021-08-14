@@ -48,13 +48,21 @@ server:
 
 
 listener:
-  port: 20001
+  port: 20000
   start: true
   cmd: 0
-  secret: 1234567
+  secret: XXXXXXXXXXX
   ip: 192.168.128.96
-  cmdPort: 19998
+  cmdPort1: 30000
+  cmdPort2: 30001
+  cmdPort3: 30002
+  cmdPort4: 30003
+  cmdPort5: 30004
+  cmdPort6: 30005
+  cmdPort7: 30006
+  cmdPort8: 30007
   imgUrl : C:/opt/tp/
+  requestUrl: http://192.168.128.96:8088/jeecg-boot/rlsbReturnData/handleReturnData
 
 
     # json:  { "code": 0 ,"message": "xxxx" ,"payload":{"params": {"command":1,"secret":"123456789","ip":"192.168.128.96","port":19995 }}}

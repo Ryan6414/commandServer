@@ -2,6 +2,7 @@ package org.mudules.cmd.nbrlsb.NbOutsider.service.impl;
 
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import io.swagger.models.auth.In;
 import org.mudules.cmd.nbrlsb.NbOutsider.entity.NbOutsider;
 import org.mudules.cmd.nbrlsb.NbOutsider.mapper.NbOutsiderMapper;
 import org.mudules.cmd.nbrlsb.NbOutsider.service.INbOutsiderService;
@@ -15,21 +16,33 @@ public class NbOutsiderServiceImpl extends ServiceImpl<NbOutsiderMapper, NbOutsi
 
 
 
+
+
     @Override
-    public List<NbOutsider> getAll() {
-        return super.baseMapper.selectList(null);
+    public NbOutsider getOneNboutsider() {
+        return super.baseMapper.getOneNboutsider();
     }
 
     @Override
-    public NbOutsider getOneInfo() {
-        return super.baseMapper.getOneByUpload();
+    public int updateUploadFlagById(String upFlag, String id) {
+        return super.baseMapper.updateUploadFlagById(upFlag,id);
     }
 
     @Override
-    public Boolean updateByUpLoad(Integer upid , String id) {
-
-        return super.baseMapper.updateById(upid, id);
+    public int updateUploadFlagByFalg(String upFlag, String id) {
+        return super.baseMapper.updateUploadFlagByFalg(upFlag,id);
     }
+
+//    @Override
+//    public NbOutsider getOneInfo(Integer up, Integer del) {
+//        return super.baseMapper.
+//    }
+//
+//    @Override
+//    public Boolean updateByUpLoad(Integer upid , String id) {
+//
+//        return super.baseMapper.updateById(upid, id);
+//    }
 
 
 }

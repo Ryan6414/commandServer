@@ -12,5 +12,20 @@ import org.springframework.stereotype.Service;
 public class NbPoliceInfoServiceImpl extends ServiceImpl<NbPoliceInfoMapper, NbPoliceInfo> implements INbPoliceInfoService {
 
 
+    @Override
+    public NbPoliceInfo getOnePolice() {
+        return super.baseMapper.getOneNbPoliceInfo();
+    }
+
+    @Override
+    public int updateUploadFlagById(String upFlag, String id) {
+        return super.baseMapper.updateUploadFlagById(upFlag,id);
+    }
+
+    @Override
+    public int updateUploadFlagByFalg(String upFlag, String  id) {
+        return super.baseMapper.updateUploadFlagByFalg(upFlag,id);
+    }
+
 
 }

@@ -3,6 +3,7 @@ package org.mudules.cmd.nbrlsb.NbOutsider.entity;
 import java.io.Serializable;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -22,12 +23,13 @@ public class NbOutsider implements Serializable {
 
 	/**id*/
 	@TableId(type = IdType.ASSIGN_ID)
-
     private String id;
 	/**姓名*/
 
     private String name;
 	/**年龄*/
+
+    private String uploadFlag;
 
     private String age;
 	/**性别*/

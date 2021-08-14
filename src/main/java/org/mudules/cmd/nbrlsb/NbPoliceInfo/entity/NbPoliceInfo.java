@@ -1,6 +1,7 @@
 package org.mudules.cmd.nbrlsb.NbPoliceInfo.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -30,6 +31,7 @@ public class NbPoliceInfo implements Serializable {
     private String id;
 	/**警号*/
 
+
     @ApiModelProperty(value = "警号")
     private String policeNumber;
 	/**姓名*/
@@ -37,6 +39,8 @@ public class NbPoliceInfo implements Serializable {
     @ApiModelProperty(value = "姓名")
     private String name;
 	/**性别*/
+
+	private String uploadFlag;
 
     @ApiModelProperty(value = "性别")
     private String gender;

@@ -32,8 +32,9 @@ public class JwtHttpUtil {
 			// TODO: handle exception
 		}finally {
 			try {
-				assert response != null;
-				response.close();
+				if(response!=null){
+					response.close();
+				}
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

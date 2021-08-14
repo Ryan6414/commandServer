@@ -14,17 +14,5 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/nb")
 @Slf4j
 public class NbPoliceInfoController  {
-	@Autowired
-	private INbPoliceInfoService nbPoliceInfoService;
-
-//	@Autowired
-//	private CommandServer com;
-
-	@GetMapping("/a")
-	public String s(){
-
-	//	com.sendCommand("{\"code\": 0 ,\"message\": \"xxxx\"}");
-		return "ok";
-	}
 
 }
